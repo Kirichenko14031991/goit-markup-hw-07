@@ -1,13 +1,13 @@
 :root {
-  --iris: #4d5ae5;
   --ocean: #404bbf;
+  --iris: #4d5ae5;
   --navi-blue: #2e2f42;
-  --cloud: #f4f4fd;
   --white: #ffffff;
+  --cloud: #f4f4fd;
   --filter-button-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
     0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   --element-gap: 24px;
-  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-propertys: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,
@@ -61,7 +61,7 @@ ul {
   color: var(--white);
   background-color: var(--iris);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color var(--transition);
+  transition: background-color var(--transition-propertys);
   cursor: pointer;
 }
 
@@ -142,7 +142,7 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--navi-blue);
-  transition: color var(--transition);
+  transition: color var(--transition-propertys);
 }
 
 .navigation-link:is(:hover, :focus) {
@@ -180,7 +180,7 @@ ul {
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #434455;
-    transition: color var(--transition);
+    transition: color var(--transition-propertys);
   }
 
   .address-link:is(:hover, :focus) {
@@ -247,7 +247,7 @@ ul {
 
   .mobile-menu-icon-open {
     fill: var(--navi-blue);
-    transition: fill var(--transition);
+    transition: fill var(--transition-propertys);
   }
 
   .mobile-menu-icon-open:is(:hover, :focus) {
@@ -261,10 +261,10 @@ ul {
     width: 100%;
     height: 100%;
     background-color: var(--white);
-    z-index: 999;
+    z-index: 5;
     overflow-y: scroll;
     transform: translateX(100%);
-    transition: transform var(--transition);
+    transition: transform var(--transition-propertys);
   }
 
   .mobile-menu-container.is-open {
@@ -289,8 +289,9 @@ ul {
     border-radius: 50%;
     border: 1px solid rgba(46, 47, 66, 0.1);
     cursor: pointer;
-    transition: fill var(--transition), background-color var(--transition),
-      border var(--transition);
+    transition: fill var(--transition-propertys),
+      background-color var(--transition-propertys),
+      border var(--transition-propertys);
   }
 
   .mobile-menu-close-btn:is(:hover, :focus) {
@@ -323,7 +324,7 @@ ul {
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: var(--navi-blue);
-    transition: color var(--transition);
+    transition: color var(--transition-propertys);
   }
 
   .mobile-menu-link.current {
@@ -371,7 +372,7 @@ ul {
     fill: var(--cloud);
     background-color: var(--iris);
     border-radius: 50%;
-    transition: background-color var(--transition);
+    transition: background-color var(--transition-propertys);
   }
 
   .mobile-social-link:is(:hover, :focus) {
@@ -456,7 +457,6 @@ ul {
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 768px;
-
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -609,7 +609,6 @@ ul {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-
   color: var(--navi-blue);
 }
 
@@ -690,14 +689,12 @@ ul {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-
   color: var(--navi-blue);
 }
 
 .our-team-card-position {
   margin-top: 8px;
   text-align: center;
-
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
@@ -717,7 +714,7 @@ ul {
   fill: var(--cloud);
   background-color: var(--iris);
   border-radius: 50%;
-  transition: background-color var(--transition);
+  transition: background-color var(--transition-propertys);
 }
 
 .our-team-social-list-link:is(:hover, :focus) {
@@ -764,7 +761,8 @@ ul {
   fill: #8e8f99;
   border: 1px solid #8e8f99;
   border-radius: 4px;
-  transition: fill var(--transition), border var(--transition);
+  transition: fill var(--transition-propertys),
+    border var(--transition-propertys);
 }
 
 .customers-link:is(:hover, :focus) {
@@ -826,7 +824,6 @@ ul {
 .footer-social-text {
   line-height: 1.5;
   letter-spacing: 0.02em;
-
   color: var(--white);
 }
 
@@ -847,7 +844,7 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
-  transition: background-color var(--transition);
+  transition: background-color var(--transition-propertys);
 }
 
 .footer-social-link:is(:hover, :focus) {
@@ -871,7 +868,7 @@ ul {
   background-color: transparent;
   border: 1px solid var(--white);
   border-radius: 4px;
-  transition: border-color var(--transition);
+  transition: border-color var(--transition-propertys);
 }
 
 .footer-input::placeholder {
@@ -896,7 +893,7 @@ ul {
   background-color: var(--iris);
   border-radius: 4px;
   border: none;
-  transition: background-color var(--transition);
+  transition: background-color var(--transition-propertys);
   cursor: pointer;
 }
 
@@ -992,12 +989,11 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-
   background-color: rgba(46, 47, 66, 0.4);
-
   opacity: 1;
   backdrop-filter: blur(12px);
-  transition: opacity var(--transition), visibility var(--transition);
+  transition: opacity var(--transition-propertys),
+    visibility var(--transition-propertys);
 }
 
 .backdrop.is-hidden {
@@ -1013,14 +1009,12 @@ ul {
   width: 100%;
   max-width: 408px;
   padding: 72px 24px 24px;
-
   background-color: #fcfcfc;
   border-radius: 4px;
-
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
-  transition: opacity var(--transition), transform var(--transition),
-    scale var(--transition);
+  transition: opacity var(--transition-propertys),
+    transform var(--transition-propertys), scale var(--transition-propertys);
 }
 
 .backdrop.is-hidden .modal {
@@ -1034,15 +1028,13 @@ ul {
   right: 24px;
   width: 24px;
   height: 24px;
-
   fill: var(--navi-blue);
   background-color: transparent;
   border-radius: 50%;
   border: 1px solid rgba(46, 47, 66, 0.1);
-
-  transition: fill var(--transition), background-color var(--transition),
-    border var(--transition);
-
+  transition: fill var(--transition-propertys),
+    background-color var(--transition-propertys),
+    border var(--transition-propertys);
   cursor: pointer;
 }
 
@@ -1061,11 +1053,9 @@ ul {
 
 .modal-form-text {
   text-align: center;
-
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-
   color: var(--navi-blue);
 }
 
@@ -1082,11 +1072,9 @@ ul {
 .modal-form-input-desc,
 .user-policy-text {
   display: block;
-
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-
   color: #8e8f99;
 }
 
@@ -1096,7 +1084,6 @@ ul {
 
 .user-policy-link {
   text-decoration: underline;
-
   color: var(--iris);
 }
 
@@ -1110,14 +1097,11 @@ ul {
   padding-left: 38px;
   width: 100%;
   height: 40px;
-
   color: var(--navi-blue);
   background-color: transparent;
-
   border: 1px solid rgba(46, 47, 66, 0.2);
   border-radius: 4px;
-
-  transition: border-color var(--transition);
+  transition: border-color var(--transition-propertys);
 }
 
 .modal-form-input:focus {
@@ -1128,11 +1112,9 @@ ul {
   position: absolute;
   top: 50%;
   left: 16px;
-
   fill: var(--navi-blue);
-
   transform: translateY(-50%);
-  transition: fill var(--transition);
+  transition: fill var(--transition-propertys);
 }
 
 .modal-form-comment {
@@ -1141,14 +1123,11 @@ ul {
   width: 100%;
   height: 120px;
   resize: none;
-
   color: var(--navi-blue);
   background-color: transparent;
-
   border: 1px solid rgba(46, 47, 66, 0.2);
   border-radius: 4px;
-
-  transition: border-color var(--transition);
+  transition: border-color var(--transition-propertys);
 }
 
 .modal-form-input:focus + .modal-form-input-icon,
@@ -1163,7 +1142,6 @@ ul {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-
   color: rgba(46, 47, 66, 0.4);
 }
 
@@ -1186,23 +1164,20 @@ ul {
   left: 0;
   width: 16px;
   height: 16px;
-
   border: 1px solid var(--navi-blue);
   border-radius: 2px;
-
   cursor: pointer;
-
   transform: translateY(-50%);
-  transition: background-color var(--transition), border-color var(--transition);
+  transition: background-color var(--transition-propertys),
+    border-color var(--transition-propertys);
 }
 
 .checkbox-policy-icon-check {
   position: absolute;
-
   fill: var(--white);
   opacity: 0;
 
-  transition: opacity var(--transition);
+  transition: opacity var(--transition-propertys);
 }
 
 .checkbox-policy:checked + * .checkbox-policy-icon,
@@ -1225,7 +1200,7 @@ ul {
   width: 169px;
 }
 
-/**--------------------- Portfolio ---------------------*/
+/*--------------------- Portfolio ---------------------*/
 
 .portfolio {
   padding: calc(var(--element-gap) * 2) 0;
@@ -1240,19 +1215,17 @@ ul {
 
 .filter-button {
   padding: 8px 16px;
-
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
-
   color: var(--iris);
   background-color: var(--cloud);
   border: 1px solid #e7e9fc;
   border-radius: 4px;
-
-  transition: color var(--transition), background-color var(--transition),
-    border-color var(--transition), box-shadow var(--transition);
-
+  transition: color var(--transition-propertys),
+    background-color var(--transition-propertys),
+    border-color var(--transition-propertys),
+    box-shadow var(--transition-propertys);
   cursor: pointer;
 }
 
@@ -1276,10 +1249,8 @@ ul {
   display: block;
   width: 100%;
   height: 100%;
-
   background-color: var(--white);
-
-  transition: box-shadow var(--transition);
+  transition: box-shadow var(--transition-propertys);
 }
 
 .portfolio-link:is(:hover, :focus) {
@@ -1288,7 +1259,6 @@ ul {
 
 .portfolio-content {
   padding: 32px 16px;
-
   border: 1px solid #e7e9fc;
   border-top: none;
 }
@@ -1298,7 +1268,6 @@ ul {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-
   color: var(--navi-blue);
 }
 
@@ -1306,11 +1275,10 @@ ul {
   margin-top: 8px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-
-  color: var(--slate);
+  color: #434455;
 }
 
-.overlay-wrapper {
+.overlay-frame {
   position: relative;
   overflow: hidden;
 }
@@ -1330,7 +1298,7 @@ ul {
   background-color: var(--iris);
 
   transform: translateY(101%);
-  transition: transform var(--transition);
+  transition: transform var(--transition-propertys);
 }
 
 .portfolio-link:is(:hover, :focus) .overlay {
@@ -1340,15 +1308,13 @@ ul {
 @media screen and (max-width: 767px) {
   .buttons-filter-list {
     display: flex;
-    justify-content: center;
-    row-gap: 8px;
-    column-gap: 8px;
+    row-gap: 16px;
+    column-gap: 24px;
   }
 
   .filter-button {
-    padding: 8px 12px;
-
-    font-size: 12px;
+    padding: 8px 16px;
+    font-size: 16px;
   }
 
   .portfolio-item:not(:first-child) {
